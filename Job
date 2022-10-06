@@ -1,4 +1,4 @@
-<php
+<?php
 print ("Hello World !! I'm Job");
 
 ?>
