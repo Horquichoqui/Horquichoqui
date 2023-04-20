@@ -1,12 +1,6 @@
-### Hi there I'm Job, Gabriel Job👋
-
-- 🔭 I’m currently working on DemandaNet Developer Full Stack
-- 📫 How to reach me: gabrielpjob2002@gmail.com
-- ⚡ Fun fact: I'd like to play soccer and resolve problems HAHAHAHA
 
 
-
-![Horquichoqui GitHub stats](https://github-readme-stats.vercel.app/api?username=Horquichoqui&show_icons=true&theme=tokyonight)
+![Gabriel GitHub stats](https://github-readme-stats.vercel.app/api?username=Horquichoqui&show_icons=true&theme=tokyonight)
 
 ## Linguagens que utilizo no dia a dia
 <div style="display: inline_block">
