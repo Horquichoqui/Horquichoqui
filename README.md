@@ -6,7 +6,7 @@
 
 
 
-![Horquichoqui's GitHub stats](https://github-readme-stats.vercel.app/api?username=Horquichoqui&show_icons=true&theme=tokyonight)
+![Horquichoqui GitHub stats](https://github-readme-stats.vercel.app/api?username=Horquichoqui&show_icons=true&theme=tokyonight)
 
 ## Linguagens que utilizo no dia a dia
 <div style="display: inline_block">
