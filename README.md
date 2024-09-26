@@ -1,4 +1,5 @@
 ### Hi there I'm Job, Gabriel Job👋
+I'm a web developer passionate about technology and innovation.
 
 - 🔭 I’m currently working on DemandaNet Developer Full Stack
 - 📫 How to reach me: gabrielpjob2002@gmail.com
