@@ -1,15 +1,37 @@
-### Hi there I'm Job, Gabriel Job👋
-I'm a web developer passionate about technology and innovation.
+# Hi there, I’m Gabriel Job 👋
 
-- 🔭 I’m currently working on DemandaNet Developer Full Stack
-- 📫 How to reach me: gabrielpjob2002@gmail.com
-- ⚡ Fun fact: I'd like to play soccer and resolve problems 
-- 💬 Ask me about  PHP, AJAX, HTML5, CSS3 JavaScript, JSON, APIs, JQuery, BootsTrap, MysqlIi , React. Vercel, NodeJs AWS and Integrations
+Welcome to my GitHub profile! I’m a passionate Full-Stack Web Developer focused on building high-performance, scalable web applications.
 
+---
 
+## 🛠️ Skills & Technologies
 
+- **Back-end:** PHP, Node.js, RESTful APIs, MySQL, SQL Server, SOAP  
+- **Front-end:** JavaScript, React, Bootstrap, AJAX, HTML5, CSS3, JSON  
+- **Cloud & DevOps:** AWS (S3), Docker, Vercel  
+- **Tools:** Git & GitHub, Postman, DBeaver, Vite  
+- **Architecture & Other:** MVC patterns, programming logic, data analysis
 
+---
 
-Apaixonado por tecnologia e a facilidade que ela traz para as pessoas no dia a dia.
+## 📌 Featured Projects
 
-(Repositórios privados)
+- **[GabrielJob.github.io](https://github.com/Horquichoqui/GabrielJob.github.io)**  
+  My personal portfolio site showcasing live demos and project write-ups.
+
+- **[port](https://github.com/Horquichoqui/port)**  
+  A dynamic JavaScript web app demonstrating API integrations and modern UI techniques.
+
+- **[Horquichoqui](https://github.com/Horquichoqui/Horquichoqui)**  
+  Custom configuration and assets powering this GitHub profile README itself.
+
+---
+
+## 📫 Let’s Connect
+
+- 📧 gabrielpjob2002@gmail.com  
+- 🔗 [LinkedIn](https://www.linkedin.com/in/gabriel-job-018649201)  
+
+---
+
+> “Driven by a love for clean code, continuous learning, and delivering reliable solutions.” 🚀  
