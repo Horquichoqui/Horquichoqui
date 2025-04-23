@@ -14,19 +14,6 @@ Welcome to my GitHub profile! I’m a passionate Full-Stack Web Developer focuse
 
 ---
 
-## 📌 Featured Projects
-
-- **[GabrielJob.github.io](https://github.com/Horquichoqui/GabrielJob.github.io)**  
-  My personal portfolio site showcasing live demos and project write-ups.
-
-- **[port](https://github.com/Horquichoqui/port)**  
-  A dynamic JavaScript web app demonstrating API integrations and modern UI techniques.
-
-- **[Horquichoqui](https://github.com/Horquichoqui/Horquichoqui)**  
-  Custom configuration and assets powering this GitHub profile README itself.
-
----
-
 ## 📫 Let’s Connect
 
 - 📧 gabrielpjob2002@gmail.com  
