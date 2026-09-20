@@ -8,6 +8,8 @@ I work across the complete software delivery lifecycle — from requirements dis
 
 My current focus is combining full-stack engineering with applied AI, using LLMs, computer vision, automation, and intelligent workflows to build practical software solutions.
 
+🌐 **[Portfolio / Portfólio](https://horquichoqui.github.io/Horquichoqui/)** — bilingual (PT-BR / EN), dark & light theme.
+
 ---
 
 ## Featured Projects
