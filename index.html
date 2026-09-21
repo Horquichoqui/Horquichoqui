@@ -43,6 +43,7 @@
 </script>
 </head>
 <body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 <a class="skip-link" href="#main" data-i18n="skip">Pular para o conteúdo</a>
 
 <header class="site-header" id="top">
@@ -60,8 +61,10 @@
     <ul class="nav-menu" id="navMenu">
       <li><a href="#about" data-i18n="nav.about">Perfil</a></li>
       <li><a href="#strengths" data-i18n="nav.strengths">Como trabalho</a></li>
+      <li><a href="#cases" data-i18n="nav.cases">Casos</a></li>
       <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
       <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+      <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
     </ul>
 
@@ -83,6 +86,7 @@
 
   <!-- HERO -->
   <section class="hero">
+    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">
@@ -91,6 +95,10 @@
         </p>
         <h1 class="hero-title">Gabriel <span class="grad">Job</span></h1>
         <p class="hero-role" data-i18n="hero.role">Full-Stack Software Engineer · IA &amp; Automação · Liderança de Projetos</p>
+        <p class="hero-typed">
+          <span data-i18n="hero.buildPrefix">Eu construo</span>
+          <span class="typed" id="typed" aria-live="polite"></span><span class="caret" aria-hidden="true"></span>
+        </p>
         <p class="hero-lead" data-i18n="hero.lead">Construo software que atravessa o ciclo inteiro — do requisito mal explicado até o suporte em produção. 4+ anos entregando plataformas web, APIs, integrações e automações com IA aplicada.</p>
 
         <div class="hero-cta">
@@ -135,10 +143,10 @@
   <!-- STATS -->
   <section class="stats" aria-label="Números" data-i18n-attr="aria-label:stats.aria">
     <div class="wrap stats-grid">
-      <div class="stat"><span class="stat-n">4+</span><span class="stat-l" data-i18n="stats.s1">anos de experiência full-stack</span></div>
-      <div class="stat"><span class="stat-n">7</span><span class="stat-l" data-i18n="stats.s2">linguagens usadas em projetos reais</span></div>
-      <div class="stat"><span class="stat-n">3</span><span class="stat-l" data-i18n="stats.s3">produtos completos, públicos e documentados</span></div>
-      <div class="stat"><span class="stat-n">100%</span><span class="stat-l" data-i18n="stats.s4">do ciclo: do requisito ao suporte</span></div>
+      <div class="stat reveal"><span class="stat-n" data-count="4" data-suffix="+">4+</span><span class="stat-l" data-i18n="stats.s1">anos de experiência full-stack</span></div>
+      <div class="stat reveal"><span class="stat-n" data-count="7">7</span><span class="stat-l" data-i18n="stats.s2">linguagens usadas em projetos reais</span></div>
+      <div class="stat reveal"><span class="stat-n" data-count="3">3</span><span class="stat-l" data-i18n="stats.s3">produtos completos, públicos e documentados</span></div>
+      <div class="stat reveal"><span class="stat-n" data-count="100" data-suffix="%">100%</span><span class="stat-l" data-i18n="stats.s4">do ciclo: do requisito ao suporte</span></div>
     </div>
   </section>
 
@@ -171,42 +179,42 @@
       <p class="section-lead" data-i18n="str.lead">Adjetivo sem evidência é ruído. Abaixo, cada característica vem com o artefato que a comprova.</p>
 
       <div class="cards">
-        <article class="card">
+        <article class="card reveal">
           <span class="card-ix">01</span>
           <h3 data-i18n="str.c1t">Ownership do início ao fim</h3>
           <p data-i18n="str.c1d">Não entrego "minha parte". Assumo do requisito ao incidente em produção, incluindo deploy, variáveis de ambiente, migrações e monitoramento.</p>
           <p class="card-proof"><span data-i18n="proof">Prova</span>: <span data-i18n="str.c1p">Entre Capítulos sobe com blueprint de infraestrutura, migração idempotente no boot e health check — não só o código da feature.</span></p>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <span class="card-ix">02</span>
           <h3 data-i18n="str.c2t">Pensamento de produto antes do código</h3>
           <p data-i18n="str.c2d">Antes de abrir o editor, eu pesquiso concorrentes, defino a tese do produto e corto o que não sustenta essa tese. Escopo enxuto é decisão, não acaso.</p>
           <p class="card-proof"><span data-i18n="proof">Prova</span>: <span data-i18n="str.c2p">Entre Capítulos nasceu de um benchmark com Fable, StoryGraph, Goodreads e Bookclubs, com tese explícita no README antes da primeira linha de código.</span></p>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <span class="card-ix">03</span>
           <h3 data-i18n="str.c3t">Pragmatismo de custo e risco</h3>
           <p data-i18n="str.c3d">Escolho a opção que entrega valor sem prender o cliente a custo ou dependência desnecessária — e escrevo o trade-off para quem vier depois.</p>
           <p class="card-proof"><span data-i18n="proof">Prova</span>: <span data-i18n="str.c3p">No Assistente Financeiro, Telegram em vez da API paga do WhatsApp e Gemini (free tier) como provedor padrão, com a lógica desacoplada do canal e do provedor de IA.</span></p>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <span class="card-ix">04</span>
           <h3 data-i18n="str.c4t">Segurança e governança por padrão</h3>
           <p data-i18n="str.c4d">Autenticação, papéis, moderação, consentimento e segredos fora do código entram no MVP — não na "fase 2" que nunca chega.</p>
           <p class="card-proof"><span data-i18n="proof">Prova</span>: <span data-i18n="str.c4p">JWT + bcrypt no Dashboard Escolar; fila de moderação, denúncias, banimento, confirmação 18+ e consentimento LGPD já no MVP do Entre Capítulos.</span></p>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <span class="card-ix">05</span>
           <h3 data-i18n="str.c5t">Comunicação que reduz o custo do time</h3>
           <p data-i18n="str.c5d">Documento decisão, não só uso. Um colega novo consegue subir meus projetos sem me chamar — isso é tempo devolvido ao time.</p>
           <p class="card-proof"><span data-i18n="proof">Prova</span>: <span data-i18n="str.c5p">READMEs com diagrama de fluxo, tabela comparativa de provedores, passo a passo de deploy e o motivo de cada decisão.</span></p>
         </article>
 
-        <article class="card">
+        <article class="card reveal">
           <span class="card-ix">06</span>
           <h3 data-i18n="str.c6t">Velocidade de aprendizado comprovada</h3>
           <p data-i18n="str.c6d">Troco de contexto sem perder qualidade: web, dados, automação e games. Stack é ferramenta, não identidade.</p>
@@ -216,8 +224,50 @@
     </div>
   </section>
 
+
+  <!-- CASOS -->
+  <section id="cases" class="section">
+    <div class="wrap">
+      <p class="kicker" data-i18n="cases.kicker">Casos</p>
+      <h2 class="h2" data-i18n="cases.title">Três decisões técnicas e o que elas mudaram</h2>
+      <p class="section-lead" data-i18n="cases.lead">Lista de tecnologia não diz nada sobre como alguém pensa. Aqui está o problema real, a decisão que tomei e o que ela produziu.</p>
+
+      <div class="cases">
+        <article class="case reveal">
+          <span class="case-ix" aria-hidden="true">01</span>
+          <h3 data-i18n="cases.c1t">Transformar uma foto em lançamento financeiro</h3>
+          <dl class="case-steps">
+            <div><dt data-i18n="cases.problem">Problema</dt><dd data-i18n="cases.c1p">Controle financeiro pessoal é abandonado por um motivo só: digitar cada gasto. Toda ferramenta do mercado empurrava o trabalho de volta para o usuário.</dd></div>
+            <div><dt data-i18n="cases.decision">Decisão</dt><dd data-i18n="cases.c1d">Foto do comprovante lida por IA de visão. Telegram como canal — oficial, gratuito, pronto em dois minutos — em vez da API do WhatsApp, que exige aprovação empresarial e cobra por conversa. Gemini no free tier como provedor padrão.</dd></div>
+            <div><dt data-i18n="cases.result">Resultado</dt><dd data-i18n="cases.c1r">Registro de despesa em uma foto, custo de operação zero, e a lógica desacoplada do canal e do provedor: trocar qualquer um dos dois não encosta no núcleo.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case reveal">
+          <span class="case-ix" aria-hidden="true">02</span>
+          <h3 data-i18n="cases.c2t">Discutir o livro sem estragar a leitura de ninguém</h3>
+          <dl class="case-steps">
+            <div><dt data-i18n="cases.problem">Problema</dt><dd data-i18n="cases.c2p">Comunidade de leitura precisa conversar sobre o livro, mas quem está atrasado leva spoiler. Um catálogo de livros não resolve isso — e era o que todo concorrente entregava.</dd></div>
+            <div><dt data-i18n="cases.decision">Decisão</dt><dd data-i18n="cases.c2d">Benchmark de seis plataformas antes da primeira linha de código, até chegar à tese: o produto não é catálogo, é clube recorrente com ritual mensal. Daí a trava de spoiler por checkpoint de progresso, e moderação, denúncia, 18+ e LGPD já no MVP.</dd></div>
+            <div><dt data-i18n="cases.result">Resultado</dt><dd data-i18n="cases.c2r">Plataforma renderizada no servidor que funciona até sem JavaScript, sobe por blueprint de infraestrutura e migra o próprio banco no boot.</dd></div>
+          </dl>
+        </article>
+
+        <article class="case reveal">
+          <span class="case-ix" aria-hidden="true">03</span>
+          <h3 data-i18n="cases.c3t">Ver o aluno em risco antes de ser tarde</h3>
+          <dl class="case-steps">
+            <div><dt data-i18n="cases.problem">Problema</dt><dd data-i18n="cases.c3p">A coordenação pedagógica só enxergava o aluno em dificuldade no fechamento do bimestre — quando já não dava para intervir.</dd></div>
+            <div><dt data-i18n="cases.decision">Decisão</dt><dd data-i18n="cases.c3d">Em vez de mais uma planilha, converter nota bruta em indicador acionável: baixo desempenho, risco de reprovação e risco de evasão, com filtros por turma e período.</dd></div>
+            <div><dt data-i18n="cases.result">Resultado</dt><dd data-i18n="cases.c3r">Dashboard com autenticação JWT, bcrypt e acesso por papel, gráficos em React sobre API Express e PostgreSQL gerenciado, implantado em instância única.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
-  <section id="projects" class="section">
+  <section id="projects" class="section section-alt">
     <div class="wrap">
       <p class="kicker" data-i18n="proj.kicker">Projetos</p>
       <h2 class="h2" data-i18n="proj.title">Produtos completos, com código aberto para leitura</h2>
@@ -225,7 +275,7 @@
 
       <div class="projects">
 
-        <article class="project">
+        <article class="project reveal">
           <header class="project-head">
             <span class="project-emoji" aria-hidden="true">🤖</span>
             <div>
@@ -245,7 +295,7 @@
           <a class="btn btn-small" href="https://github.com/Horquichoqui/assistenteHome" target="_blank" rel="noopener noreferrer" data-i18n="proj.view">Ver repositório →</a>
         </article>
 
-        <article class="project">
+        <article class="project reveal">
           <header class="project-head">
             <span class="project-emoji" aria-hidden="true">🌙</span>
             <div>
@@ -265,7 +315,7 @@
           <a class="btn btn-small" href="https://github.com/Horquichoqui/sistemaBook" target="_blank" rel="noopener noreferrer" data-i18n="proj.view">Ver repositório →</a>
         </article>
 
-        <article class="project">
+        <article class="project reveal">
           <header class="project-head">
             <span class="project-emoji" aria-hidden="true">📊</span>
             <div>
@@ -289,18 +339,18 @@
       <h3 class="sub-h3" data-i18n="proj.moreTitle">Também em desenvolvimento (repositórios privados)</h3>
       <p class="section-lead small" data-i18n="proj.moreLead">Trabalhos em andamento ou de cliente. Código disponível sob solicitação, em entrevista técnica.</p>
       <div class="mini-cards">
-        <article class="mini"><h4 data-i18n="proj.m1t">Meu Primeiro Contrato</h4><p data-i18n="proj.m1d">RPG narrativo de carreira de jogador de futebol, com economia, progressão e decisões de contrato.</p><ul class="tags"><li>Unity</li><li>C#</li></ul></article>
-        <article class="mini"><h4 data-i18n="proj.m2t">Agente Meridiano</h4><p data-i18n="proj.m2d">Agente de IA para agências de viagem: montagem e apoio a roteiros de viagem.</p><ul class="tags"><li>TypeScript</li><li>LLM</li></ul></article>
-        <article class="mini"><h4 data-i18n="proj.m3t">sysCadCalcEletric</h4><p data-i18n="proj.m3d">Leitura de plantas de AutoCAD com cálculo automático de dimensionamento elétrico.</p><ul class="tags"><li>Python</li><li>CAD</li></ul></article>
-        <article class="mini"><h4 data-i18n="proj.m4t">Sistema de Análise de Futebol</h4><p data-i18n="proj.m4d">Motor de análise estatística de partidas, padrões e probabilidades de resultado.</p><ul class="tags"><li>Python</li><li data-i18n="tag.data">Dados</li></ul></article>
-        <article class="mini"><h4 data-i18n="proj.m5t">Controle de Buffet</h4><p data-i18n="proj.m5d">Gestão de estoque e operação para buffet, com controle de insumos e eventos.</p><ul class="tags"><li>JavaScript</li><li>Node.js</li></ul></article>
-        <article class="mini"><h4 data-i18n="proj.m6t">PerceptIA</h4><p data-i18n="proj.m6d">Produto de percepção assistida por IA aplicada a fluxos de análise.</p><ul class="tags"><li>JavaScript</li><li data-i18n="tag.ai">IA</li></ul></article>
+        <article class="mini reveal"><h4 data-i18n="proj.m1t">Meu Primeiro Contrato</h4><p data-i18n="proj.m1d">RPG narrativo de carreira de jogador de futebol, com economia, progressão e decisões de contrato.</p><ul class="tags"><li>Unity</li><li>C#</li></ul></article>
+        <article class="mini reveal"><h4 data-i18n="proj.m2t">Agente Meridiano</h4><p data-i18n="proj.m2d">Agente de IA para agências de viagem: montagem e apoio a roteiros de viagem.</p><ul class="tags"><li>TypeScript</li><li>LLM</li></ul></article>
+        <article class="mini reveal"><h4 data-i18n="proj.m3t">sysCadCalcEletric</h4><p data-i18n="proj.m3d">Leitura de plantas de AutoCAD com cálculo automático de dimensionamento elétrico.</p><ul class="tags"><li>Python</li><li>CAD</li></ul></article>
+        <article class="mini reveal"><h4 data-i18n="proj.m4t">Sistema de Análise de Futebol</h4><p data-i18n="proj.m4d">Motor de análise estatística de partidas, padrões e probabilidades de resultado.</p><ul class="tags"><li>Python</li><li data-i18n="tag.data">Dados</li></ul></article>
+        <article class="mini reveal"><h4 data-i18n="proj.m5t">Controle de Buffet</h4><p data-i18n="proj.m5d">Gestão de estoque e operação para buffet, com controle de insumos e eventos.</p><ul class="tags"><li>JavaScript</li><li>Node.js</li></ul></article>
+        <article class="mini reveal"><h4 data-i18n="proj.m6t">PerceptIA</h4><p data-i18n="proj.m6d">Produto de percepção assistida por IA aplicada a fluxos de análise.</p><ul class="tags"><li>JavaScript</li><li data-i18n="tag.ai">IA</li></ul></article>
       </div>
     </div>
   </section>
 
   <!-- STACK -->
-  <section id="stack" class="section section-alt">
+  <section id="stack" class="section">
     <div class="wrap">
       <p class="kicker" data-i18n="stack.kicker">Stack</p>
       <h2 class="h2" data-i18n="stack.title">Ferramentas que uso em produção</h2>
@@ -322,6 +372,70 @@
         <li><span class="p-n">5</span><strong data-i18n="proc.s5t">Deploy</strong><span data-i18n="proc.s5d">Infraestrutura declarada, migração automática, segredo fora do código.</span></li>
         <li><span class="p-n">6</span><strong data-i18n="proc.s6t">Suporte</strong><span data-i18n="proc.s6d">Acompanho em produção, corrijo e documento para o próximo do time.</span></li>
       </ol>
+    </div>
+  </section>
+
+
+  <!-- PRIMEIROS 90 DIAS -->
+  <section id="ramp" class="section section-accent">
+    <div class="wrap">
+      <p class="kicker" data-i18n="ramp.kicker">O que você recebe</p>
+      <h2 class="h2" data-i18n="ramp.title">Meus primeiros 90 dias no seu time</h2>
+      <p class="section-lead" data-i18n="ramp.lead">Contratar é uma decisão de risco tomada com informação incompleta. Este é o plano que reduz o seu.</p>
+
+      <ol class="ramp">
+        <li class="reveal">
+          <span class="ramp-when" data-i18n="ramp.w1">Dias 1 – 15</span>
+          <strong data-i18n="ramp.t1">Leio antes de opinar</strong>
+          <p data-i18n="ramp.d1">Entro no código existente sem propor reescrita. Entrego uma correção pequena e real já na primeira semana — o suficiente para calibrar o fluxo do time, o padrão do projeto e o caminho até produção.</p>
+        </li>
+        <li class="reveal">
+          <span class="ramp-when" data-i18n="ramp.w2">Dias 16 – 45</span>
+          <strong data-i18n="ramp.t2">Assumo uma entrega inteira</strong>
+          <p data-i18n="ramp.d2">Pego uma funcionalidade de ponta a ponta: requisito, código, teste, deploy e acompanhamento em produção. Sem depender de alguém para fechar a última milha.</p>
+        </li>
+        <li class="reveal">
+          <span class="ramp-when" data-i18n="ramp.w3">Dias 46 – 90</span>
+          <strong data-i18n="ramp.t3">Devolvo o que o código me mostrou</strong>
+          <p data-i18n="ramp.d3">A essa altura eu conheço os pontos frágeis. Trago as melhorias com trade-off escrito e impacto estimado — proposta que dá para aprovar ou recusar com argumento, não opinião solta.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="wrap">
+      <p class="kicker" data-i18n="faq.kicker">Antes de você perguntar</p>
+      <h2 class="h2" data-i18n="faq.title">As perguntas que todo recrutador faz</h2>
+      <p class="section-lead" data-i18n="faq.lead">Respondidas aqui para você não precisar gastar uma triagem descobrindo.</p>
+
+      <div class="faq">
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q1">Full-stack de verdade, ou frontend com um pouco de backend?</summary>
+          <p data-i18n="faq.a1">De verdade. Nos três projetos públicos eu escrevi o backend, o frontend, o schema do banco, a autenticação e a configuração de deploy. Dá para conferir commit por commit — é por isso que os repositórios estão abertos.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q2">Você usa IA para escrever código?</summary>
+          <p data-i18n="faq.a2">Uso, como ferramenta — e reviso linha por linha. Respondo por tudo que assino, inclusive pelo que a IA sugeriu e eu aceitei. Saber conduzir e auditar essas ferramentas virou parte do trabalho; terceirizar julgamento para elas, não.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q3">Como você lida com requisito mal definido?</summary>
+          <p data-i18n="faq.a3">Traduzo em escopo verificável antes de codar: o que precisa acontecer, como se prova que aconteceu e o que está fora. Se duas leituras do pedido levam a produtos diferentes, eu pergunto — mas trago as opções, não o problema de volta.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q4">Qual seu modelo de trabalho e fuso?</summary>
+          <p data-i18n="faq.a4">Remoto, no fuso do Brasil (UTC−3). Isso dá sobreposição confortável com a Europa pela manhã e com as Américas o dia inteiro. Aberto a contrato CLT, PJ ou contractor internacional.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q5">E o inglês?</summary>
+          <p data-i18n="faq.a5">Profissional para o que o trabalho exige: leio documentação e código, escrevo documentação, issue e pull request, e participo de reunião técnica. Toda a engenharia deste portfólio está publicada nos dois idiomas.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary data-i18n="faq.q6">Por que vários repositórios seus são privados?</summary>
+          <p data-i18n="faq.a6">São trabalhos de cliente ou produtos em andamento. Não publico código que não é meu para publicar — e abro qualquer um deles em entrevista técnica, com a tela compartilhada.</p>
+        </details>
+      </div>
     </div>
   </section>
 
