@@ -494,7 +494,7 @@ a:hover { text-decoration: underline; }
 .chip-note { margin-top: auto; color: var(--text-mute); font-size: .8rem; }
 
 /* Âncora da nova seção não pode parar embaixo do cabeçalho fixo */
-#specialties { scroll-margin-top: 86px; }
+#specialties, #clients { scroll-margin-top: 86px; }
 
 /* ---------- Responsivo ---------- */
 @media (max-width: 1000px) {
